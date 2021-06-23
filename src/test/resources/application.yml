@@ -1,0 +1,13 @@
+logging:
+  level:
+    root: INFO
+    org.springframework.web: ERROR
+    com.howtodoinjava: DEBUG
+    org.hibernate: ERROR
+
+csv:
+  folder-path: /Users/thendriks/projects/ditect/csvs
+mapping:
+  mapping-file: /Users/thendriks/projects/ditect/mapping.ttl
+kafka:
+  bootstrap-address: "localhost:9092"
