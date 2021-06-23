@@ -12,6 +12,6 @@ kafka:
   bootstrap-address: "localhost:9092"
 
 csv:
-  folder-path: /Users/thendriks/projects/ditect/csvs
+  folder-path: /csvs
   delimiter: ";"
   quote: "\""

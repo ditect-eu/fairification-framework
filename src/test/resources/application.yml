@@ -6,8 +6,8 @@ logging:
     org.hibernate: ERROR
 
 csv:
-  folder-path: /Users/thendriks/projects/ditect/csvs
+  folder-path: /csvs
 mapping:
-  mapping-file: /Users/thendriks/projects/ditect/mapping.ttl
+  mapping-file: mapping.ttl
 kafka:
   bootstrap-address: "localhost:9092"

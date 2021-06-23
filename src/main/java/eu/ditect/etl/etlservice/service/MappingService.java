@@ -65,7 +65,7 @@ public class MappingService {
                     "@prefix rml: <http://semweb.mmlab.be/ns/rml#>." +
                     "@prefix map: <http://mapping.example.com/>."
                     + "map:source_000 a rml:LogicalSource;\n" +
-                    "rml:source \"/Users/thendriks/projects/ditect/csvs/convertedenose.csv\";\n" +
+                    "rml:source \"/csvs/convertedenose.csv\";\n" +
                     "rml:referenceFormulation ql:CSV.", StandardCharsets.UTF_8);
 
             QuadStore rmlStore = QuadStoreFactory.read(fileStream);
