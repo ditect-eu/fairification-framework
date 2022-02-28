@@ -5,13 +5,20 @@ logging:
   level:
     root: INFO
     org.springframework.web: ERROR
-    com.howtodoinjava: DEBUG
     org.hibernate: ERROR
+    org.apache.http: DEBUG
 
 kafka:
   bootstrap-address: "localhost:9092"
 
 csv:
-  folder-path: /csvs
-  delimiter: ";"
-  quote: "\""
+  csvConfigList:
+    -
+      folder-path: /Users/thendriks/projects/ditect/csvs
+      delimiter: ";"
+      quote: "\""
+    -
+      folder-path: /Users/thendriks/projects/ditect/csvs2
+      delimiter: "|"
+      quote: "\""
+

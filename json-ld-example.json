@@ -1,0 +1,29 @@
+{
+    "dateInserted": "2021-12-19",
+    "@id": "http://www.ditect.eu/testid",
+    "schema:name": "GCMS_AIR.csv",
+    "schema:description": "GC-MS DiTECT data for testing purposes.",
+    "schema:license": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "schema:country": "obo:GAZ_00002945", 
+    "ditect:partnerCode": "MU",
+    "ditect:pilotCode": "poultry",
+    "ditect:instrumentName": "ditect:DIT_0000326",
+    "ditect:typeOfAnalysis": "obo:CHMO:0002542",
+    "schema:creator": "ditect:DIT_0000982",
+    "schema:dateCreated": "2021-05-03T11:35:30.00Z",
+    "ditect:manufacturingProcessing": true,
+    "ditect:primaryProduction": true,
+    "ditect:distributionRetail": true,
+    "ditect:packingStage": true,
+    "ditect:metadata": {
+        "@type": "obo:CHMO_0002392",
+        "ditect:workflowData": {
+            "ditect:hasColumns": 
+            {
+                "obo:CHEBI_0002392": "Acetaldehyde",
+                "obo:CHEBI:16236" : "Ethyl.alcohol",
+                "obo:CHEBI:15347" : "Acetone"
+            }
+        }
+    }
+}

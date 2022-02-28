@@ -15,8 +15,24 @@
 	<description>ETL service for the DiTECT project</description>
 	<properties>
 		<java.version>11</java.version>
+    <frontend-src-dir>${project.basedir}/src/main/app</frontend-src-dir>
+    <node.version>v16.5.0</node.version>
+    <frontend-maven-plugin.version>1.7.6</frontend-maven-plugin.version>
+    <npm.version>7.19.1</npm.version>
 	</properties>
+
 	<dependencies>
+    <dependency>
+      <groupId>net.sourceforge.owlapi</groupId>
+      <artifactId>owlapi-distribution</artifactId>
+      <version>5.1.19</version>
+    </dependency>
+    <dependency>
+      <groupId>org.clojars.stain</groupId>
+      <artifactId>owlapi-jsonld</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -138,6 +154,44 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+              <groupId>com.github.eirslett</groupId>
+              <artifactId>frontend-maven-plugin</artifactId>
+              <version>${frontend-maven-plugin.version}</version>
+
+              <configuration>
+                <nodeVersion>${node.version}</nodeVersion>
+                <workingDirectory>${frontend-src-dir}</workingDirectory>
+                <installDirectory>${project.build.directory}</installDirectory>
+                <npmVersion>${npm.version}</npmVersion>
+                <workingDirectory>${project.basedir}</workingDirectory>
+              </configuration>
+
+              <executions>
+                <execution>
+                  <id>install-frontend-tools</id>
+                  <goals>
+                    <goal>install-node-and-npm</goal>
+                  </goals>
+                </execution>
+                <execution>
+                  <id>npm run build</id>
+                  <goals>
+                    <goal>npm</goal>
+                  </goals>
+                  <configuration>
+                    <arguments>run build</arguments>
+                  </configuration>
+                </execution>
+              </executions>
+            </plugin>
 		</plugins>
 	</build>
+  <repositories>
+    <repository>
+      <id>clojars</id>
+      <name>Clojars repository</name>
+      <url>https://clojars.org/repo</url>
+    </repository>
+  </repositories>
 </project>

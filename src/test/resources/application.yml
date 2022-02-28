@@ -2,11 +2,18 @@ logging:
   level:
     root: INFO
     org.springframework.web: ERROR
-    com.howtodoinjava: DEBUG
     org.hibernate: ERROR
+    org.apache.http: DEBUG
+    org:
+      springframework:
+        web:
+          client:
+            RestTemplate: DEBUG
 
 csv:
   folder-path: /csvs
+  delimiter: ";"
+  quote: "\""
 mapping:
   mapping-file: mapping.ttl
 kafka:
