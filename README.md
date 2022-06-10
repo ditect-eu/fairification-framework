@@ -1,2 +1,2 @@
 # fairification-framework
-**Warning: currently in an unfinished/prototyping state.** FAIRification and harmonization framework for the www.ditect.eu project.
+**Warning: currently in an unfinished/prototyping state.** FAIRification and harmonization framework using FAIR Principles in www.ditect.eu project.
